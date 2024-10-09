@@ -44,17 +44,8 @@ public class LoginPage {
 		javascriptExecutor.executeScript("arguments[0].click();", loginBtn);
 		return navBar.isLogoutLinkVisible();
 	}
-
-//	public boolean loginFailed() {
-//
-//		List<WebElement> errorDiv = driver.findElements(By.xpath("//mat-card//div[contains(@class,'error')]"));
-//
-//		if (!errorDiv.isEmpty()) {
-//			System.out.println("Login Failed");
-//			return errorDiv.getFirst().getText().equalsIgnoreCase("Invalid email or password.");
-//		}
-//		return false;
-//	}
+	
+	
 
 	public void newCustomerClick() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;

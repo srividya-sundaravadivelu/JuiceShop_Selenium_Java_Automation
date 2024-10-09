@@ -1,38 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="13" passed="1" failed="1" skipped="11">
+<testng-results ignored="0" total="13" passed="0" failed="0" skipped="13">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-10-07T15:46:51 CDT" name="Default suite" finished-at="2024-10-07T15:47:08 CDT" duration-ms="17407">
+  <suite started-at="2024-10-09T11:30:22 CDT" name="Default suite" finished-at="2024-10-09T11:30:33 CDT" duration-ms="11119">
     <groups>
     </groups>
-    <test started-at="2024-10-07T15:46:51 CDT" name="Default test" finished-at="2024-10-07T15:47:08 CDT" duration-ms="17407">
+    <test started-at="2024-10-09T11:30:22 CDT" name="Default test" finished-at="2024-10-09T11:30:33 CDT" duration-ms="11119">
       <class name="tests.JuiceShopTestsWithTestNG">
-        <test-method is-config="true" signature="initializeTest()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-07T15:46:51 CDT" name="initializeTest" finished-at="2024-10-07T15:46:58 CDT" duration-ms="6609" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeTest -->
-        <test-method signature="testLogin()[pri:1, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-07T15:46:58 CDT" name="testLogin" finished-at="2024-10-07T15:47:05 CDT" duration-ms="7236" status="FAIL">
-          <exception class="java.lang.AssertionError">
+        <test-method is-config="true" signature="initializeTest()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-09T11:30:22 CDT" name="initializeTest" finished-at="2024-10-09T11:30:33 CDT" duration-ms="10812" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[expected [true] but found [false]]]>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//a[contains(@class,'cc-btn')]"}
+  (Session info: chrome=129.0.6668.90)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.24.0', revision: '748ffc9bc3'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c8b788bbc12ae0dd4fe6ac726c5e9cfa, findElement {using=xpath, value=//a[contains(@class,'cc-btn')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.58 (81a06fb873a9..., userDataDir: C:\Users\srivi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53999}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53999/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 3000, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c8b788bbc12ae0dd4fe6ac726c5e9cfa]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at org.testng.Assert.assertTrue(Assert.java:67)
-at tests.JuiceShopTestsWithTestNG.testLogin(JuiceShopTestsWithTestNG.java:64)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[contains(@class,'cc-btn')]"}
+  (Session info: chrome=129.0.6668.90)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.24.0', revision: '748ffc9bc3'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c8b788bbc12ae0dd4fe6ac726c5e9cfa, findElement {using=xpath, value=//a[contains(@class,'cc-btn')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.58 (81a06fb873a9..., userDataDir: C:\Users\srivi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53999}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53999/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 3000, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c8b788bbc12ae0dd4fe6ac726c5e9cfa
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy13.click(Unknown Source)
+at pages.MainPage.dismissPopups(MainPage.java:36)
+at tests.JuiceShopTestsWithTestNG.initializeTest(JuiceShopTestsWithTestNG.java:54)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
 at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
 at org.testng.TestRunner.privateRun(TestRunner.java:739)
 at org.testng.TestRunner.run(TestRunner.java:614)
@@ -51,11 +75,83 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeTest -->
+        <test-method signature="testLogin()[pri:1, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-09T11:30:33 CDT" name="testLogin" finished-at="2024-10-09T11:30:33 CDT" duration-ms="0" status="SKIP">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//a[contains(@class,'cc-btn')]"}
+  (Session info: chrome=129.0.6668.90)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.24.0', revision: '748ffc9bc3'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c8b788bbc12ae0dd4fe6ac726c5e9cfa, findElement {using=xpath, value=//a[contains(@class,'cc-btn')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.58 (81a06fb873a9..., userDataDir: C:\Users\srivi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53999}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53999/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 3000, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c8b788bbc12ae0dd4fe6ac726c5e9cfa]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[contains(@class,'cc-btn')]"}
+  (Session info: chrome=129.0.6668.90)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.24.0', revision: '748ffc9bc3'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c8b788bbc12ae0dd4fe6ac726c5e9cfa, findElement {using=xpath, value=//a[contains(@class,'cc-btn')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.58 (81a06fb873a9..., userDataDir: C:\Users\srivi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53999}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53999/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 3000, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c8b788bbc12ae0dd4fe6ac726c5e9cfa
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy13.click(Unknown Source)
+at pages.MainPage.dismissPopups(MainPage.java:36)
+at tests.JuiceShopTestsWithTestNG.initializeTest(JuiceShopTestsWithTestNG.java:54)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogin -->
-        <test-method signature="testAddToCart()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-07T15:47:05 CDT" name="testAddToCart" finished-at="2024-10-07T15:47:05 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testLogin" duration-ms="0" status="SKIP">
+        <test-method signature="testAddToCart()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-09T11:30:33 CDT" name="testAddToCart" finished-at="2024-10-09T11:30:33 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testLogin" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
               <![CDATA[Method tests.JuiceShopTestsWithTestNG.testAddToCart() on instance tests.JuiceShopTestsWithTestNG@1f2586d6 depends on not successfully finished methods 
@@ -89,7 +185,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAddToCart -->
-        <test-method signature="testIncreaseAllQty()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-07T15:47:05 CDT" name="testIncreaseAllQty" finished-at="2024-10-07T15:47:05 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testAddToCart" duration-ms="1" status="SKIP">
+        <test-method signature="testIncreaseAllQty()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-09T11:30:33 CDT" name="testIncreaseAllQty" finished-at="2024-10-09T11:30:33 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testAddToCart" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
               <![CDATA[Method tests.JuiceShopTestsWithTestNG.testIncreaseAllQty() on instance tests.JuiceShopTestsWithTestNG@1f2586d6 depends on not successfully finished methods 
@@ -123,7 +219,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testIncreaseAllQty -->
-        <test-method signature="testCheckout()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-07T15:47:05 CDT" name="testCheckout" finished-at="2024-10-07T15:47:05 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testIncreaseAllQty" duration-ms="0" status="SKIP">
+        <test-method signature="testCheckout()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-09T11:30:33 CDT" name="testCheckout" finished-at="2024-10-09T11:30:33 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testIncreaseAllQty" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
               <![CDATA[Method tests.JuiceShopTestsWithTestNG.testCheckout() on instance tests.JuiceShopTestsWithTestNG@1f2586d6 depends on not successfully finished methods 
@@ -157,7 +253,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCheckout -->
-        <test-method signature="testAddNewAddress()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-07T15:47:05 CDT" name="testAddNewAddress" finished-at="2024-10-07T15:47:05 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testCheckout" duration-ms="0" status="SKIP">
+        <test-method signature="testAddNewAddress()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-09T11:30:33 CDT" name="testAddNewAddress" finished-at="2024-10-09T11:30:33 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testCheckout" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
               <![CDATA[Method tests.JuiceShopTestsWithTestNG.testAddNewAddress() on instance tests.JuiceShopTestsWithTestNG@1f2586d6 depends on not successfully finished methods 
@@ -191,11 +287,79 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAddNewAddress -->
-        <test-method signature="testRegisterUser()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-07T15:47:05 CDT" name="testRegisterUser" finished-at="2024-10-07T15:47:06 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testLogin" duration-ms="1139" status="PASS">
+        <test-method signature="testRegisterUser()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-09T11:30:33 CDT" name="testRegisterUser" finished-at="2024-10-09T11:30:33 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testLogin" duration-ms="0" status="SKIP">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//a[contains(@class,'cc-btn')]"}
+  (Session info: chrome=129.0.6668.90)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.24.0', revision: '748ffc9bc3'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c8b788bbc12ae0dd4fe6ac726c5e9cfa, findElement {using=xpath, value=//a[contains(@class,'cc-btn')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.58 (81a06fb873a9..., userDataDir: C:\Users\srivi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53999}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53999/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 3000, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c8b788bbc12ae0dd4fe6ac726c5e9cfa]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[contains(@class,'cc-btn')]"}
+  (Session info: chrome=129.0.6668.90)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.24.0', revision: '748ffc9bc3'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c8b788bbc12ae0dd4fe6ac726c5e9cfa, findElement {using=xpath, value=//a[contains(@class,'cc-btn')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.58 (81a06fb873a9..., userDataDir: C:\Users\srivi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53999}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53999/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 3000, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c8b788bbc12ae0dd4fe6ac726c5e9cfa
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy13.click(Unknown Source)
+at pages.MainPage.dismissPopups(MainPage.java:36)
+at tests.JuiceShopTestsWithTestNG.initializeTest(JuiceShopTestsWithTestNG.java:54)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRegisterUser -->
-        <test-method signature="testSelectOneDayDelivery()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-07T15:47:08 CDT" name="testSelectOneDayDelivery" finished-at="2024-10-07T15:47:08 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testAddNewAddress" duration-ms="0" status="SKIP">
+        <test-method signature="testSelectOneDayDelivery()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-09T11:30:33 CDT" name="testSelectOneDayDelivery" finished-at="2024-10-09T11:30:33 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testAddNewAddress" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
               <![CDATA[Method tests.JuiceShopTestsWithTestNG.testSelectOneDayDelivery() on instance tests.JuiceShopTestsWithTestNG@1f2586d6 depends on not successfully finished methods 
@@ -229,7 +393,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSelectOneDayDelivery -->
-        <test-method signature="testMakePayment()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-07T15:47:08 CDT" name="testMakePayment" finished-at="2024-10-07T15:47:08 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testSelectOneDayDelivery" duration-ms="0" status="SKIP">
+        <test-method signature="testMakePayment()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-09T11:30:33 CDT" name="testMakePayment" finished-at="2024-10-09T11:30:33 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testSelectOneDayDelivery" duration-ms="1" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
               <![CDATA[Method tests.JuiceShopTestsWithTestNG.testMakePayment() on instance tests.JuiceShopTestsWithTestNG@1f2586d6 depends on not successfully finished methods 
@@ -263,7 +427,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMakePayment -->
-        <test-method signature="testPlaceOrderAndPay()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-07T15:47:08 CDT" name="testPlaceOrderAndPay" finished-at="2024-10-07T15:47:08 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testMakePayment" duration-ms="0" status="SKIP">
+        <test-method signature="testPlaceOrderAndPay()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-09T11:30:33 CDT" name="testPlaceOrderAndPay" finished-at="2024-10-09T11:30:33 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testMakePayment" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
               <![CDATA[Method tests.JuiceShopTestsWithTestNG.testPlaceOrderAndPay() on instance tests.JuiceShopTestsWithTestNG@1f2586d6 depends on not successfully finished methods 
@@ -297,7 +461,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPlaceOrderAndPay -->
-        <test-method signature="testViewOrderHistory()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-07T15:47:08 CDT" name="testViewOrderHistory" finished-at="2024-10-07T15:47:08 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testPlaceOrderAndPay" duration-ms="1" status="SKIP">
+        <test-method signature="testViewOrderHistory()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-09T11:30:33 CDT" name="testViewOrderHistory" finished-at="2024-10-09T11:30:33 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testPlaceOrderAndPay" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
               <![CDATA[Method tests.JuiceShopTestsWithTestNG.testViewOrderHistory() on instance tests.JuiceShopTestsWithTestNG@1f2586d6 depends on not successfully finished methods 
@@ -331,7 +495,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testViewOrderHistory -->
-        <test-method signature="testPrintOrderConfimation()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-07T15:47:08 CDT" name="testPrintOrderConfimation" finished-at="2024-10-07T15:47:08 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testViewOrderHistory" duration-ms="0" status="SKIP">
+        <test-method signature="testPrintOrderConfimation()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-09T11:30:33 CDT" name="testPrintOrderConfimation" finished-at="2024-10-09T11:30:33 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testViewOrderHistory" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
               <![CDATA[Method tests.JuiceShopTestsWithTestNG.testPrintOrderConfimation() on instance tests.JuiceShopTestsWithTestNG@1f2586d6 depends on not successfully finished methods 
@@ -365,7 +529,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPrintOrderConfimation -->
-        <test-method signature="testLogout()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-07T15:47:08 CDT" name="testLogout" finished-at="2024-10-07T15:47:08 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testPrintOrderConfimation" duration-ms="0" status="SKIP">
+        <test-method signature="testLogout()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-09T11:30:33 CDT" name="testLogout" finished-at="2024-10-09T11:30:33 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testPrintOrderConfimation" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
               <![CDATA[Method tests.JuiceShopTestsWithTestNG.testLogout() on instance tests.JuiceShopTestsWithTestNG@1f2586d6 depends on not successfully finished methods 
@@ -399,7 +563,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogout -->
-        <test-method signature="testTrackOrder()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-07T15:47:08 CDT" name="testTrackOrder" finished-at="2024-10-07T15:47:08 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testViewOrderHistory" duration-ms="0" status="SKIP">
+        <test-method signature="testTrackOrder()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-09T11:30:33 CDT" name="testTrackOrder" finished-at="2024-10-09T11:30:33 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testViewOrderHistory" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
               <![CDATA[Method tests.JuiceShopTestsWithTestNG.testTrackOrder() on instance tests.JuiceShopTestsWithTestNG@1f2586d6 depends on not successfully finished methods 
