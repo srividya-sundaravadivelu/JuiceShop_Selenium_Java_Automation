@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="13" passed="1" failed="1" skipped="11">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-10-07T15:46:51 CDT" name="Default suite" finished-at="2024-10-07T15:47:08 CDT" duration-ms="17407">
+    <groups>
+    </groups>
+    <test started-at="2024-10-07T15:46:51 CDT" name="Default test" finished-at="2024-10-07T15:47:08 CDT" duration-ms="17407">
+      <class name="tests.JuiceShopTestsWithTestNG">
+        <test-method is-config="true" signature="initializeTest()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-07T15:46:51 CDT" name="initializeTest" finished-at="2024-10-07T15:46:58 CDT" duration-ms="6609" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeTest -->
+        <test-method signature="testLogin()[pri:1, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-07T15:46:58 CDT" name="testLogin" finished-at="2024-10-07T15:47:05 CDT" duration-ms="7236" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at org.testng.Assert.assertTrue(Assert.java:67)
+at tests.JuiceShopTestsWithTestNG.testLogin(JuiceShopTestsWithTestNG.java:64)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogin -->
+        <test-method signature="testAddToCart()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-07T15:47:05 CDT" name="testAddToCart" finished-at="2024-10-07T15:47:05 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testLogin" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method tests.JuiceShopTestsWithTestNG.testAddToCart() on instance tests.JuiceShopTestsWithTestNG@1f2586d6 depends on not successfully finished methods 
+[tests.JuiceShopTestsWithTestNG.testLogin() on instance tests.JuiceShopTestsWithTestNG@1f2586d6]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method tests.JuiceShopTestsWithTestNG.testAddToCart() on instance tests.JuiceShopTestsWithTestNG@1f2586d6 depends on not successfully finished methods 
+[tests.JuiceShopTestsWithTestNG.testLogin() on instance tests.JuiceShopTestsWithTestNG@1f2586d6]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddToCart -->
+        <test-method signature="testIncreaseAllQty()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-07T15:47:05 CDT" name="testIncreaseAllQty" finished-at="2024-10-07T15:47:05 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testAddToCart" duration-ms="1" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method tests.JuiceShopTestsWithTestNG.testIncreaseAllQty() on instance tests.JuiceShopTestsWithTestNG@1f2586d6 depends on not successfully finished methods 
+[tests.JuiceShopTestsWithTestNG.testAddToCart() on instance tests.JuiceShopTestsWithTestNG@1f2586d6]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method tests.JuiceShopTestsWithTestNG.testIncreaseAllQty() on instance tests.JuiceShopTestsWithTestNG@1f2586d6 depends on not successfully finished methods 
+[tests.JuiceShopTestsWithTestNG.testAddToCart() on instance tests.JuiceShopTestsWithTestNG@1f2586d6]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIncreaseAllQty -->
+        <test-method signature="testCheckout()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-07T15:47:05 CDT" name="testCheckout" finished-at="2024-10-07T15:47:05 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testIncreaseAllQty" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method tests.JuiceShopTestsWithTestNG.testCheckout() on instance tests.JuiceShopTestsWithTestNG@1f2586d6 depends on not successfully finished methods 
+[tests.JuiceShopTestsWithTestNG.testIncreaseAllQty() on instance tests.JuiceShopTestsWithTestNG@1f2586d6]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method tests.JuiceShopTestsWithTestNG.testCheckout() on instance tests.JuiceShopTestsWithTestNG@1f2586d6 depends on not successfully finished methods 
+[tests.JuiceShopTestsWithTestNG.testIncreaseAllQty() on instance tests.JuiceShopTestsWithTestNG@1f2586d6]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheckout -->
+        <test-method signature="testAddNewAddress()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-07T15:47:05 CDT" name="testAddNewAddress" finished-at="2024-10-07T15:47:05 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testCheckout" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method tests.JuiceShopTestsWithTestNG.testAddNewAddress() on instance tests.JuiceShopTestsWithTestNG@1f2586d6 depends on not successfully finished methods 
+[tests.JuiceShopTestsWithTestNG.testCheckout() on instance tests.JuiceShopTestsWithTestNG@1f2586d6]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method tests.JuiceShopTestsWithTestNG.testAddNewAddress() on instance tests.JuiceShopTestsWithTestNG@1f2586d6 depends on not successfully finished methods 
+[tests.JuiceShopTestsWithTestNG.testCheckout() on instance tests.JuiceShopTestsWithTestNG@1f2586d6]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddNewAddress -->
+        <test-method signature="testRegisterUser()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-07T15:47:05 CDT" name="testRegisterUser" finished-at="2024-10-07T15:47:06 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testLogin" duration-ms="1139" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegisterUser -->
+        <test-method signature="testSelectOneDayDelivery()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-07T15:47:08 CDT" name="testSelectOneDayDelivery" finished-at="2024-10-07T15:47:08 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testAddNewAddress" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method tests.JuiceShopTestsWithTestNG.testSelectOneDayDelivery() on instance tests.JuiceShopTestsWithTestNG@1f2586d6 depends on not successfully finished methods 
+[tests.JuiceShopTestsWithTestNG.testAddNewAddress() on instance tests.JuiceShopTestsWithTestNG@1f2586d6]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method tests.JuiceShopTestsWithTestNG.testSelectOneDayDelivery() on instance tests.JuiceShopTestsWithTestNG@1f2586d6 depends on not successfully finished methods 
+[tests.JuiceShopTestsWithTestNG.testAddNewAddress() on instance tests.JuiceShopTestsWithTestNG@1f2586d6]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSelectOneDayDelivery -->
+        <test-method signature="testMakePayment()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-07T15:47:08 CDT" name="testMakePayment" finished-at="2024-10-07T15:47:08 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testSelectOneDayDelivery" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method tests.JuiceShopTestsWithTestNG.testMakePayment() on instance tests.JuiceShopTestsWithTestNG@1f2586d6 depends on not successfully finished methods 
+[tests.JuiceShopTestsWithTestNG.testSelectOneDayDelivery() on instance tests.JuiceShopTestsWithTestNG@1f2586d6]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method tests.JuiceShopTestsWithTestNG.testMakePayment() on instance tests.JuiceShopTestsWithTestNG@1f2586d6 depends on not successfully finished methods 
+[tests.JuiceShopTestsWithTestNG.testSelectOneDayDelivery() on instance tests.JuiceShopTestsWithTestNG@1f2586d6]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMakePayment -->
+        <test-method signature="testPlaceOrderAndPay()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-07T15:47:08 CDT" name="testPlaceOrderAndPay" finished-at="2024-10-07T15:47:08 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testMakePayment" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method tests.JuiceShopTestsWithTestNG.testPlaceOrderAndPay() on instance tests.JuiceShopTestsWithTestNG@1f2586d6 depends on not successfully finished methods 
+[tests.JuiceShopTestsWithTestNG.testMakePayment() on instance tests.JuiceShopTestsWithTestNG@1f2586d6]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method tests.JuiceShopTestsWithTestNG.testPlaceOrderAndPay() on instance tests.JuiceShopTestsWithTestNG@1f2586d6 depends on not successfully finished methods 
+[tests.JuiceShopTestsWithTestNG.testMakePayment() on instance tests.JuiceShopTestsWithTestNG@1f2586d6]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPlaceOrderAndPay -->
+        <test-method signature="testViewOrderHistory()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-07T15:47:08 CDT" name="testViewOrderHistory" finished-at="2024-10-07T15:47:08 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testPlaceOrderAndPay" duration-ms="1" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method tests.JuiceShopTestsWithTestNG.testViewOrderHistory() on instance tests.JuiceShopTestsWithTestNG@1f2586d6 depends on not successfully finished methods 
+[tests.JuiceShopTestsWithTestNG.testPlaceOrderAndPay() on instance tests.JuiceShopTestsWithTestNG@1f2586d6]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method tests.JuiceShopTestsWithTestNG.testViewOrderHistory() on instance tests.JuiceShopTestsWithTestNG@1f2586d6 depends on not successfully finished methods 
+[tests.JuiceShopTestsWithTestNG.testPlaceOrderAndPay() on instance tests.JuiceShopTestsWithTestNG@1f2586d6]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testViewOrderHistory -->
+        <test-method signature="testPrintOrderConfimation()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-07T15:47:08 CDT" name="testPrintOrderConfimation" finished-at="2024-10-07T15:47:08 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testViewOrderHistory" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method tests.JuiceShopTestsWithTestNG.testPrintOrderConfimation() on instance tests.JuiceShopTestsWithTestNG@1f2586d6 depends on not successfully finished methods 
+[tests.JuiceShopTestsWithTestNG.testViewOrderHistory() on instance tests.JuiceShopTestsWithTestNG@1f2586d6]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method tests.JuiceShopTestsWithTestNG.testPrintOrderConfimation() on instance tests.JuiceShopTestsWithTestNG@1f2586d6 depends on not successfully finished methods 
+[tests.JuiceShopTestsWithTestNG.testViewOrderHistory() on instance tests.JuiceShopTestsWithTestNG@1f2586d6]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPrintOrderConfimation -->
+        <test-method signature="testLogout()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-07T15:47:08 CDT" name="testLogout" finished-at="2024-10-07T15:47:08 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testPrintOrderConfimation" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method tests.JuiceShopTestsWithTestNG.testLogout() on instance tests.JuiceShopTestsWithTestNG@1f2586d6 depends on not successfully finished methods 
+[tests.JuiceShopTestsWithTestNG.testPrintOrderConfimation() on instance tests.JuiceShopTestsWithTestNG@1f2586d6]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method tests.JuiceShopTestsWithTestNG.testLogout() on instance tests.JuiceShopTestsWithTestNG@1f2586d6 depends on not successfully finished methods 
+[tests.JuiceShopTestsWithTestNG.testPrintOrderConfimation() on instance tests.JuiceShopTestsWithTestNG@1f2586d6]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogout -->
+        <test-method signature="testTrackOrder()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-07T15:47:08 CDT" name="testTrackOrder" finished-at="2024-10-07T15:47:08 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testViewOrderHistory" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method tests.JuiceShopTestsWithTestNG.testTrackOrder() on instance tests.JuiceShopTestsWithTestNG@1f2586d6 depends on not successfully finished methods 
+[tests.JuiceShopTestsWithTestNG.testViewOrderHistory() on instance tests.JuiceShopTestsWithTestNG@1f2586d6]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method tests.JuiceShopTestsWithTestNG.testTrackOrder() on instance tests.JuiceShopTestsWithTestNG@1f2586d6 depends on not successfully finished methods 
+[tests.JuiceShopTestsWithTestNG.testViewOrderHistory() on instance tests.JuiceShopTestsWithTestNG@1f2586d6]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTrackOrder -->
+      </class> <!-- tests.JuiceShopTestsWithTestNG -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
