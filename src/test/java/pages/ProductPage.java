@@ -14,7 +14,9 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class ProductPage {
+import base.BasePage;
+
+public class ProductPage extends BasePage {
 
 	private WebDriver driver;
 	private WebDriverWait wait;
@@ -22,6 +24,9 @@ public class ProductPage {
 	
 	@FindBy(xpath = "//span[contains(@class,'mat-simple-snack-bar-content')]")
 	WebElement addToCartSuccessText;
+	
+	@FindBy(xpath = "//div[text()='All Products']")
+	WebElement productsHeader;
 
 	public ProductPage(WebDriver driver) {
 		this.driver = driver;
@@ -69,6 +74,17 @@ public class ProductPage {
 		}
 		
 	}
+	
+	public boolean isProductsHeaderDisplayed() {
+		try {	
+	    	
+	        return productsHeader.isDisplayed();
+	    } catch (NoSuchElementException e) {		    	
+	        return false;
+	    }
+	}
+	
+	
 	
 	public String getSuccessText() {
 		try {

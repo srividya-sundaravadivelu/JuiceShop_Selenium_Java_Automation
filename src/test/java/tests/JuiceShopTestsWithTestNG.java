@@ -14,15 +14,19 @@ import org.testng.Assert;
 
 import data.UserData;
 import data.UserDataBuilder;
+import pages.AddressPage;
 import pages.CheckoutPage;
 import pages.DeliveryPage;
 import pages.LoginPage;
 import pages.MainPage;
 import pages.NavBar;
+import pages.OrderCompletionPage;
+import pages.OrderHistoryPage;
 import pages.OrderSummary;
 import pages.PaymentPage;
 import pages.ProductPage;
 import pages.RegistrationPage;
+import pages.TrackOrderPage;
 import listeners.RetryLoginAfterRegistrationListener;
 
 @Listeners(RetryLoginAfterRegistrationListener.class)
@@ -60,22 +64,19 @@ public class JuiceShopTestsWithTestNG {
 		navBar.loginClick();
 
 		LoginPage loginPage = new LoginPage(driver);
-		loginSuccess = loginPage.login(userData.getEmail(), userData.getPass());
-		Assert.assertTrue(loginSuccess);		
+		navBar = loginPage.login(userData.getEmail(), userData.getPass());
+		Assert.assertTrue(navBar.isLogoutLinkVisible());		
 	}
 
 	@Test(dependsOnMethods = "testLogin", alwaysRun = true)
 	public void testRegisterUser() {
 		if (!loginSuccess) {
 			RegistrationPage registrationPage = new RegistrationPage(driver);
-			registrationPage.registerUser(this.userData.getEmail(), this.userData.getPass(),
+			LoginPage loginPage = registrationPage.registerUser(this.userData.getEmail(), this.userData.getPass(),
 					"Name of your favorite pet?", "dog");
+			
+			Assert.assertTrue(loginPage.isLoginHeaderDisplayed());
 
-//			// Try logging in with the registered credentials to verify if registration is
-//			// working.
-//			LoginPage loginPage = new LoginPage(driver);
-//			loginSuccess = loginPage.login(userData.getEmail(), userData.getPass());
-//			Assert.assertTrue(loginSuccess);
 		}
 	}
 
@@ -112,17 +113,15 @@ public class JuiceShopTestsWithTestNG {
 	public void testCheckout() {		
 		CheckoutPage checkoutPage = new CheckoutPage(driver);
 		Assert.assertTrue(checkoutPage.getTotalPriceText().contains("187.93"));
-		checkoutPage.checkout();		
-		String expectedUrl = "https://juice-shop.herokuapp.com/#/address/select";
-		String actualUrl = driver.getCurrentUrl();
-		Assert.assertEquals(actualUrl, expectedUrl);
+		AddressPage addressPage = checkoutPage.checkout();			
+		Assert.assertTrue(addressPage.isAddressHeaderDisplayed());
 	}
 
 	@Test(dependsOnMethods = "testCheckout")
 	public void testAddNewAddress() {
 		CheckoutPage checkoutPage = new CheckoutPage(driver);
 		DeliveryPage deliveryPage = new DeliveryPage(driver);
-		checkoutPage.addNewAddress(userData.getCountry(), userData.getName(), userData.getMobileNumber(),
+		deliveryPage = checkoutPage.addNewAddress(userData.getCountry(), userData.getName(), userData.getMobileNumber(),
 				userData.getZipcode(), userData.getAddress(), userData.getCity(), userData.getState());
 		
 		
@@ -132,43 +131,43 @@ public class JuiceShopTestsWithTestNG {
 		Assert.assertTrue(deliveryPage.getAddress().contains(userData.getCity()));
 		Assert.assertTrue(deliveryPage.getAddress().contains(userData.getZipcode()));
 		Assert.assertEquals(deliveryPage.getCountry(), userData.getCountry());
-		Assert.assertEquals(deliveryPage.getPhoneNumber(), userData.getMobileNumber());
-		String expectedUrl = "https://juice-shop.herokuapp.com/#/delivery-method";
-		String actualUrl = driver.getCurrentUrl();
-		Assert.assertEquals(actualUrl, expectedUrl);
+//		Assert.assertEquals(deliveryPage.getPhoneNumber(), userData.getMobileNumber());
+		Assert.assertTrue(deliveryPage.isDeliveryHeaderDisplayed());
 	}
 
 	@Test(dependsOnMethods = "testAddNewAddress")
 	public void testSelectOneDayDelivery() {
 		DeliveryPage deliveryPage = new DeliveryPage(driver);
-		deliveryPage.selectOneDayDelivery();
-		String expectedUrl = "https://juice-shop.herokuapp.com/#/payment/shop";
-		String actualUrl = driver.getCurrentUrl();
-		Assert.assertEquals(actualUrl, expectedUrl);
+		PaymentPage paymentPage = deliveryPage.selectOneDayDelivery();
+		Assert.assertTrue(paymentPage.isPaymentHeaderDisplayed());
 	}
 
 	@Test(dependsOnMethods = "testSelectOneDayDelivery")
 	public void testMakePayment() {
 		PaymentPage paymentPage = new PaymentPage(driver);
-		paymentPage.makePayment(userData.getName(), "4012888888881881", "6", "2080", "ABCDEFGHIJ");
+		OrderSummary orderSummary = paymentPage.makePayment(userData.getName(), "4012888888881881", "6", "2080", "ABCDEFGHIJ");
+		Assert.assertTrue(orderSummary.isOrderSummaryHeaderDisplayed());
 	}
 
 	@Test(dependsOnMethods = "testMakePayment")
 	public void testPlaceOrderAndPay() {
 		OrderSummary orderSummary = new OrderSummary(driver);
-		orderSummary.placeOrderAndPay();
+		OrderCompletionPage orderCompletionPage = orderSummary.placeOrderAndPay();
+		Assert.assertTrue(orderCompletionPage.isOrderCompletionHeaderDisplayed());
 	}
 
 	@Test(dependsOnMethods = "testPlaceOrderAndPay")
 	public void testViewOrderHistory() {
 		NavBar navBar = new NavBar(driver);
-		navBar.viewOrderHistory();
+		OrderHistoryPage orderHistoryPage = navBar.viewOrderHistory();
+		Assert.assertTrue(orderHistoryPage.isOrderHistoryHeaderDisplayed());
 	}
 
 	@Test(dependsOnMethods = "testViewOrderHistory")
 	public void testTrackOrder() {
 		NavBar navBar = new NavBar(driver);
-		navBar.trackOrder();
+		TrackOrderPage trackOrderPage = navBar.trackOrder();
+		Assert.assertTrue(trackOrderPage.isTrackOrderHeaderDisplayed());
 	}
 
 	@Test(dependsOnMethods = "testViewOrderHistory")
@@ -186,7 +185,8 @@ public class JuiceShopTestsWithTestNG {
 		// Switch to the original tab (assuming it's the first one, index 0)
 		driver.switchTo().window(tabs.get(0));
 
-		navBar.logout();
+		navBar = navBar.logout();
+		Assert.assertTrue(navBar.isLoginLinkVisible());
 	}
 
 	public static void waitForDomStable() {

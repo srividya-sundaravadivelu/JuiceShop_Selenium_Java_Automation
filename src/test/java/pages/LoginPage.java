@@ -1,15 +1,15 @@
 package pages;
 
-import java.util.List;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage {
+import base.BasePage;
+
+public class LoginPage extends BasePage {
 	WebDriver driver;
 	NavBar navBar;
 	
@@ -22,11 +22,11 @@ public class LoginPage {
 	@FindBy(id = "loginButton")
 	WebElement loginBtn;
 
-//	@FindBy(xpath = "//a[@routerlink='/register']")
-//	WebElement registerLink;
-
 	@FindBy(xpath = "//div[@id='newCustomerLink']//a")
 	WebElement newCustomerLink;
+	
+	@FindBy(xpath = "//h1[text()='Login']")
+	WebElement loginHeader;
 
 	public LoginPage(WebDriver driver) {
 		this.driver = driver;
@@ -34,21 +34,26 @@ public class LoginPage {
 		navBar = new NavBar(driver);
 	}
 
-	public boolean login(String email, String password) {
-		emailField.clear();
-		emailField.sendKeys(email);
-		passwordField.clear();
-		passwordField.sendKeys(password);
-		//loginBtn.click();
+	public NavBar login(String email, String password) {
+		set(emailField,email);
+		set(passwordField,password);		
 		JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
 		javascriptExecutor.executeScript("arguments[0].click();", loginBtn);
-		return navBar.isLogoutLinkVisible();
+		return new NavBar(driver);
 	}
-	
 	
 
 	public void newCustomerClick() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();", newCustomerLink);
+	}
+	
+	public boolean isLoginHeaderDisplayed() {
+		try {	
+	    	
+	        return loginHeader.isDisplayed();
+	    } catch (NoSuchElementException e) {		    	
+	        return false;
+	    }
 	}
 }

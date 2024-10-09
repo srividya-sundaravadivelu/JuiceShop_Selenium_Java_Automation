@@ -14,7 +14,9 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class CheckoutPage {
+import base.BasePage;
+
+public class CheckoutPage extends BasePage {
 
 	WebDriver driver;
 	WebDriverWait wait;	
@@ -36,11 +38,13 @@ public class CheckoutPage {
 		addressPage = new AddressPage(driver);
 	}
 
-	public void checkout() {
+	public AddressPage checkout() {
 		
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();", checkoutButton);
+		return new AddressPage(driver);
 	}
+	
 
 	private void addNewAddressClick() {	
 		
@@ -80,10 +84,10 @@ public class CheckoutPage {
 		return totalPrice.getText();
 	}
 
-	public void addNewAddress(String country, String name, int mobileNumber, String zipCode, String address,
+	public DeliveryPage addNewAddress(String country, String name, int mobileNumber, String zipCode, String address,
 			String city, String state) {
 		addNewAddressClick();
-		addressPage.addNewAddress(country, name, mobileNumber, zipCode, address, city, state);
+		return addressPage.addNewAddress(country, name, mobileNumber, zipCode, address, city, state);
 
 	}
 

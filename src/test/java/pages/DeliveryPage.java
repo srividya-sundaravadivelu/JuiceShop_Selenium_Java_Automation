@@ -3,15 +3,17 @@ package pages;
 import java.time.Duration;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import base.BasePage;
 import data.UserData;
 
-public class DeliveryPage {
+public class DeliveryPage extends BasePage {
 	WebDriver driver;
 	WebDriverWait wait;	
 	
@@ -30,9 +32,11 @@ public class DeliveryPage {
 	@FindBy(xpath = "//div[contains(@class,'addressCont')]//div[3]")
 	WebElement countryDiv;
 	
-	@FindBy(xpath="//div[contains(@class,'addressCont')]//div[4]//span")
+	@FindBy(xpath="//span[text()='Phone Number']/following-sibling::*")
 	WebElement phoneNumberDiv;
 	
+	@FindBy(xpath = "//h1[text()='Delivery Address']")
+	WebElement deliveryHeader;
 	
 	public DeliveryPage(WebDriver driver) {
 		this.driver = driver;
@@ -40,15 +44,16 @@ public class DeliveryPage {
 		PageFactory.initElements(driver, this);		
 	}
 	
-	public void selectOneDayDelivery() {
+	public PaymentPage selectOneDayDelivery() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();", oneDayDeliveryRadioButton);
-		continueClick();
+		return continueClick();
 	}
 	
-	private void continueClick() {
+	private PaymentPage continueClick() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].click();", continueButton);		
+		js.executeScript("arguments[0].click();", continueButton);	
+		return new PaymentPage(driver);
 	}
 	
 	public String getName() {
@@ -69,6 +74,15 @@ public class DeliveryPage {
 	public String getPhoneNumber() {
 		return phoneNumberDiv.getText();
 		
+	}
+	
+	public boolean isDeliveryHeaderDisplayed() {
+		try {	
+	    	
+	        return deliveryHeader.isDisplayed();
+	    } catch (NoSuchElementException e) {		    	
+	        return false;
+	    }
 	}
 
 }

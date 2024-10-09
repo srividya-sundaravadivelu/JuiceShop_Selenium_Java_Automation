@@ -3,6 +3,7 @@ package pages;
 import java.time.Duration;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -11,7 +12,9 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class AddressPage {
+import base.BasePage;
+
+public class AddressPage extends BasePage {
 
 	WebDriver driver;
 	WebDriverWait wait;
@@ -47,6 +50,10 @@ public class AddressPage {
 	@FindBy(xpath = "//button[contains(@class,'btn-next')]")
 	WebElement continueButton;
 
+	@FindBy(xpath = "//h1[text()='Select an address']")
+	WebElement addressHeader;
+	
+	
 	public AddressPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
@@ -54,29 +61,37 @@ public class AddressPage {
 		actions = new Actions(driver);
 	}
 
-	public void addNewAddress(String country, String name, int mobileNumber, String zipCode, String address,
+	public DeliveryPage addNewAddress(String country, String name, int mobileNumber, String zipCode, String address,
 			String city, String state) {
 
-		countryInput.clear();
-		countryInput.sendKeys(country);
-		nameInput.clear();
-		nameInput.sendKeys(name);
-		mobileNumberInput.clear();
-		mobileNumberInput.sendKeys(String.valueOf(mobileNumber));
-		zipCodeInput.clear();
-		zipCodeInput.sendKeys(zipCode);
-		addressInput.clear();
-		addressInput.sendKeys(address);
-		cityInput.clear();
-		cityInput.sendKeys(city);
-		stateInput.clear();
-		stateInput.sendKeys(state);	
+		set(countryInput,country);
+		set(nameInput,name);
+		set(mobileNumberInput,String.valueOf(mobileNumber));
+		set(zipCodeInput,zipCode);
+		set(addressInput,address);
+		set(cityInput,city);
+		set(stateInput,state);		
 		
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();", submitButton);
 		js.executeScript("arguments[0].click();", addressRadioButton);
-		js.executeScript("arguments[0].click();", continueButton);
+		return onContinueClick();
 		
+	}
+	
+	public DeliveryPage onContinueClick() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;		
+		js.executeScript("arguments[0].click();", continueButton);
+		return new DeliveryPage(driver);
+	}
+	
+	public boolean isAddressHeaderDisplayed() {
+		try {	
+	    	
+	        return addressHeader.isDisplayed();
+	    } catch (NoSuchElementException e) {		    	
+	        return false;
+	    }
 	}
 
 }

@@ -7,7 +7,7 @@ public final class UserDataBuilder {
 
      // Generating fake data
      String name = "name1";
-     String email = "abc2@gmail.com";
+     String email = "abc4@gmail.com";
      String pass = "P@ssword123";
      int mobileNumber = 1234567890;
      String address = "address 1234";

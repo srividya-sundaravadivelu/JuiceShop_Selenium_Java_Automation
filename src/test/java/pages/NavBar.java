@@ -13,7 +13,9 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class NavBar {
+import base.BasePage;
+
+public class NavBar extends BasePage {
 	WebDriver driver;
 	WebDriverWait wait;	
 	JavascriptExecutor js;
@@ -54,10 +56,15 @@ public class NavBar {
 		actions = new Actions(driver);
 	}
 	
-	public void viewOrderHistory() {
+	public OrderHistoryPage viewOrderHistory() {
 		accountButtonClick();
 		js.executeScript("arguments[0].click();", ordersAndPaymentButton);
-		js.executeScript("arguments[0].click();", orderHistoryButton);		
+		return orderHistoryButtonClick();
+	}
+	
+	public OrderHistoryPage orderHistoryButtonClick() {
+		js.executeScript("arguments[0].click();", orderHistoryButton);	
+		return new OrderHistoryPage(driver);
 	}
 	
 	public boolean isLogoutLinkVisible() {
@@ -85,9 +92,10 @@ public class NavBar {
 		js.executeScript("arguments[0].click();", loginButton);
 	}
 	
-	public void logout() {
+	public NavBar logout() {
 		accountButtonClick();
 		js.executeScript("arguments[0].click();", logoutButton);
+		return new NavBar(driver);
 	}
 	
 	private void accountButtonClick() {
@@ -99,8 +107,9 @@ public class NavBar {
 		js.executeScript("arguments[0].click();", printOrderButton);
 	}
 	
-	public void trackOrder() {
+	public TrackOrderPage trackOrder() {
 		js.executeScript("arguments[0].click();", trackOrderButton);
+		return new TrackOrderPage(driver);
 	}
 	
 	public void navigateToYourBasket() {

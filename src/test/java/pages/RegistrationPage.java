@@ -9,7 +9,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-public class RegistrationPage {
+import base.BasePage;
+
+public class RegistrationPage extends BasePage {
 	WebDriver driver;
 	@FindBy(id = "emailControl")
 	WebElement emailField;
@@ -39,18 +41,14 @@ public class RegistrationPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	public void registerUser(String email, String password, String securityQuestion, String securityAnswer) {
+	public LoginPage registerUser(String email, String password, String securityQuestion, String securityAnswer) {
 
 		JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.newCustomerClick();
-		emailField.clear();
-		emailField.sendKeys(email);
-		passwordField.clear();
-		passwordField.sendKeys(password);
-		repeatPasswordField.clear();
-		repeatPasswordField.sendKeys(password);
-		// securityQuestionField.click();
+		set(emailField,email);
+		set(passwordField,password);
+		set(repeatPasswordField,password);		
 		javascriptExecutor.executeScript("arguments[0].click();", securityQuestionField);
 
 		for (WebElement option : securityQuestionOptionsField) {
@@ -62,8 +60,15 @@ public class RegistrationPage {
 
 		securityAnswerField.clear();
 		securityAnswerField.sendKeys(securityAnswer);
+		return registerButtonClick();
+		
+	}
+	
+	public LoginPage registerButtonClick() {
 
+		JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
 		javascriptExecutor.executeScript("arguments[0].click();", registerBtn);
+		return new LoginPage(driver);
 	}
 
 	public void getSuccessText() {

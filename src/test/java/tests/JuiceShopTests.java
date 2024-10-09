@@ -68,9 +68,9 @@ public class JuiceShopTests {
 
 		mainPage.dismissPopups();
 		navBar.loginClick();
-		boolean isloginSuccess = loginPage.login(userData.getEmail(), userData.getPass());
+		navBar = loginPage.login(userData.getEmail(), userData.getPass());
 
-		if (!isloginSuccess) {
+		if (!navBar.isLogoutLinkVisible()) {
 			registrationPage.registerUser(userData.getEmail(), userData.getPass(), "Name of your favorite pet?", "dog");
 			loginPage.login(userData.getEmail(), userData.getPass());
 		}

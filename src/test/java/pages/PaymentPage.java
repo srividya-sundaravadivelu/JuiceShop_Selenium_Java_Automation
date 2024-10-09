@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -15,7 +16,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class PaymentPage {
+import base.BasePage;
+
+public class PaymentPage extends BasePage {
 
 	WebDriver driver;
 	WebDriverWait wait;
@@ -48,6 +51,9 @@ public class PaymentPage {
 	@FindBy(xpath = "//button[contains(@class,'nextButton')]")
 	WebElement continueButton;
 	
+	@FindBy(xpath = "//h1[text()='My Payment Options']")
+	WebElement paymentHeader;
+	
 	// Coupon Section
 	@FindBy(xpath = "//mat-panel-title[contains(text(),'Add a coupon')]/ancestor::mat-expansion-panel//span[contains(@class,'mat-expansion-indicator')]")
 	WebElement addCouponPanel;
@@ -74,11 +80,8 @@ public class PaymentPage {
 //		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();", addNewCardPanel);
 
-		nameInput.clear();
-		nameInput.sendKeys(name);
-
-		cardNumberInput.clear();
-		cardNumberInput.sendKeys(cardNumber);
+		set(nameInput,name);
+		set(cardNumberInput,cardNumber);
 
 		Select expiryMonthDropDown = new Select(expiryMonthSelect);
 		expiryMonthDropDown.selectByValue(expiryMonth);
@@ -92,8 +95,7 @@ public class PaymentPage {
 	
 	private String addCoupon(String couponCode) {
 		js.executeScript("arguments[0].click();", addCouponPanel);
-		couponInput.clear();
-		couponInput.sendKeys(couponCode);
+		set(couponInput,couponCode);
 		js.executeScript("arguments[0].click();", applyCouponButton);
 		
 		List<WebElement> errors = driver.findElements(By.xpath("//div[contains(@class,'error')]"));
@@ -103,19 +105,27 @@ public class PaymentPage {
 		
 	}
 
-	public void makePayment(String name, String cardNumber, String expiryMonth, String expiryYear, String couponCode) {
+	public OrderSummary makePayment(String name, String cardNumber, String expiryMonth, String expiryYear, String couponCode) {
 
 		addNewCard(name, cardNumber, expiryMonth, expiryYear);
 		String errorText = addCoupon(couponCode);
 		System.out.println(errorText);
-		
-//		actions.pause(Duration.ofSeconds(3));
-//		actions.scrollToElement(cardDetailsRadioButton).build().perform();
-//		cardDetailsRadioButton.click();
 		js.executeScript("arguments[0].click();", wait.until(ExpectedConditions.elementToBeClickable(cardDetailsRadioButton)));
-		
-//		actions.scrollToElement(continueButton);
+		return continueButtonClick();
+	}
+	
+	public OrderSummary continueButtonClick() {
 		js.executeScript("arguments[0].click();", wait.until(ExpectedConditions.elementToBeClickable(continueButton)));
+		return new OrderSummary(driver);
+	}
+	
+	public boolean isPaymentHeaderDisplayed() {
+		try {	
+	    	
+	        return paymentHeader.isDisplayed();
+	    } catch (NoSuchElementException e) {		    	
+	        return false;
+	    }
 	}
 
 }
