@@ -1,37 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="13" passed="11" failed="2" skipped="0">
+<testng-results ignored="0" total="13" passed="10" failed="3" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-10-09T18:36:49 CDT" name="Default suite" finished-at="2024-10-09T18:37:22 CDT" duration-ms="32378">
+  <suite started-at="2024-10-09T20:24:02 CDT" name="Default suite" finished-at="2024-10-09T20:24:41 CDT" duration-ms="39330">
     <groups>
     </groups>
-    <test started-at="2024-10-09T18:36:49 CDT" name="Default test" finished-at="2024-10-09T18:37:22 CDT" duration-ms="32378">
+    <test started-at="2024-10-09T20:24:02 CDT" name="Default test" finished-at="2024-10-09T20:24:41 CDT" duration-ms="39330">
       <class name="tests.JuiceShopTestsWithTestNG">
-        <test-method is-config="true" signature="initializeTest()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-09T18:36:50 CDT" name="initializeTest" finished-at="2024-10-09T18:36:58 CDT" duration-ms="8862" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.JuiceShopTestsWithTestNG@217ed35e]" started-at="2024-10-09T20:24:02 CDT" name="setUp" finished-at="2024-10-09T20:24:12 CDT" duration-ms="9838" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- initializeTest -->
-        <test-method signature="testLogin()[pri:1, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-09T18:36:58 CDT" name="testLogin" finished-at="2024-10-09T18:37:00 CDT" duration-ms="1587" status="PASS">
+        </test-method> <!-- setUp -->
+        <test-method signature="testLogin()[pri:1, instance:tests.JuiceShopTestsWithTestNG@217ed35e]" started-at="2024-10-09T20:24:12 CDT" name="testLogin" finished-at="2024-10-09T20:24:17 CDT" duration-ms="4620" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogin -->
-        <test-method signature="testAddToCart()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-09T18:37:00 CDT" name="testAddToCart" finished-at="2024-10-09T18:37:06 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testLogin" duration-ms="5519" status="PASS">
+        <test-method is-config="true" signature="takeFailedResultScreenshot(org.testng.ITestResult)[pri:0, instance:tests.JuiceShopTestsWithTestNG@217ed35e]" started-at="2024-10-09T20:24:17 CDT" name="takeFailedResultScreenshot" finished-at="2024-10-09T20:24:17 CDT" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testLogin status=SUCCESS method=JuiceShopTestsWithTestNG.testLogin()[pri:1, instance:tests.JuiceShopTestsWithTestNG@217ed35e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeFailedResultScreenshot -->
+        <test-method signature="testAddToCart()[pri:0, instance:tests.JuiceShopTestsWithTestNG@217ed35e]" started-at="2024-10-09T20:24:17 CDT" name="testAddToCart" finished-at="2024-10-09T20:24:22 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testLogin" duration-ms="5245" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAddToCart -->
-        <test-method signature="testIncreaseAllQty()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-09T18:37:06 CDT" name="testIncreaseAllQty" finished-at="2024-10-09T18:37:07 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testAddToCart" duration-ms="1461" status="PASS">
+        <test-method is-config="true" signature="takeFailedResultScreenshot(org.testng.ITestResult)[pri:0, instance:tests.JuiceShopTestsWithTestNG@217ed35e]" started-at="2024-10-09T20:24:22 CDT" name="takeFailedResultScreenshot" finished-at="2024-10-09T20:24:22 CDT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testAddToCart status=SUCCESS method=JuiceShopTestsWithTestNG.testAddToCart()[pri:0, instance:tests.JuiceShopTestsWithTestNG@217ed35e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeFailedResultScreenshot -->
+        <test-method signature="testIncreaseAllQty()[pri:0, instance:tests.JuiceShopTestsWithTestNG@217ed35e]" started-at="2024-10-09T20:24:22 CDT" name="testIncreaseAllQty" finished-at="2024-10-09T20:24:24 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testAddToCart" duration-ms="1705" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testIncreaseAllQty -->
-        <test-method signature="testCheckout()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-09T18:37:07 CDT" name="testCheckout" finished-at="2024-10-09T18:37:07 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testIncreaseAllQty" duration-ms="123" status="PASS">
+        <test-method is-config="true" signature="takeFailedResultScreenshot(org.testng.ITestResult)[pri:0, instance:tests.JuiceShopTestsWithTestNG@217ed35e]" started-at="2024-10-09T20:24:24 CDT" name="takeFailedResultScreenshot" finished-at="2024-10-09T20:24:24 CDT" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testIncreaseAllQty status=SUCCESS method=JuiceShopTestsWithTestNG.testIncreaseAllQty()[pri:0, instance:tests.JuiceShopTestsWithTestNG@217ed35e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeFailedResultScreenshot -->
+        <test-method signature="testCheckout()[pri:0, instance:tests.JuiceShopTestsWithTestNG@217ed35e]" started-at="2024-10-09T20:24:24 CDT" name="testCheckout" finished-at="2024-10-09T20:24:24 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testIncreaseAllQty" duration-ms="178" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCheckout -->
-        <test-method signature="testAddNewAddress()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-09T18:37:07 CDT" name="testAddNewAddress" finished-at="2024-10-09T18:37:10 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testCheckout" duration-ms="2783" status="PASS">
+        <test-method is-config="true" signature="takeFailedResultScreenshot(org.testng.ITestResult)[pri:0, instance:tests.JuiceShopTestsWithTestNG@217ed35e]" started-at="2024-10-09T20:24:24 CDT" name="takeFailedResultScreenshot" finished-at="2024-10-09T20:24:24 CDT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testCheckout status=SUCCESS method=JuiceShopTestsWithTestNG.testCheckout()[pri:0, instance:tests.JuiceShopTestsWithTestNG@217ed35e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeFailedResultScreenshot -->
+        <test-method signature="testAddNewAddress()[pri:0, instance:tests.JuiceShopTestsWithTestNG@217ed35e]" started-at="2024-10-09T20:24:24 CDT" name="testAddNewAddress" finished-at="2024-10-09T20:24:28 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testCheckout" duration-ms="3770" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAddNewAddress -->
-        <test-method signature="testRegisterUser()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-09T18:37:10 CDT" name="testRegisterUser" finished-at="2024-10-09T18:37:13 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testLogin" duration-ms="3065" status="FAIL">
+        <test-method is-config="true" signature="takeFailedResultScreenshot(org.testng.ITestResult)[pri:0, instance:tests.JuiceShopTestsWithTestNG@217ed35e]" started-at="2024-10-09T20:24:28 CDT" name="takeFailedResultScreenshot" finished-at="2024-10-09T20:24:28 CDT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testAddNewAddress status=SUCCESS method=JuiceShopTestsWithTestNG.testAddNewAddress()[pri:0, instance:tests.JuiceShopTestsWithTestNG@217ed35e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeFailedResultScreenshot -->
+        <test-method signature="testRegisterUser()[pri:0, instance:tests.JuiceShopTestsWithTestNG@217ed35e]" started-at="2024-10-09T20:24:28 CDT" name="testRegisterUser" finished-at="2024-10-09T20:24:31 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testLogin" duration-ms="3076" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='newCustomerLink']//a"}
@@ -40,9 +95,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.24.0', revision: '748ffc9bc3'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [75738b33a3674ef2bc2c03ffce8a5d8f, findElement {using=xpath, value=//div[@id='newCustomerLink']//a}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.58 (81a06fb873a9..., userDataDir: C:\Users\srivi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54419}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54419/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 3000, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 75738b33a3674ef2bc2c03ffce8a5d8f]]>
+Command: [9a283302227a4bb243eeeb1dbc5af397, findElement {using=xpath, value=//div[@id='newCustomerLink']//a}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.58 (81a06fb873a9..., userDataDir: C:\Users\srivi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59358}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59358/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 3000, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9a283302227a4bb243eeeb1dbc5af397]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='newCustomerLink']//a"}
@@ -51,9 +106,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.24.0', revision: '748ffc9bc3'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [75738b33a3674ef2bc2c03ffce8a5d8f, findElement {using=xpath, value=//div[@id='newCustomerLink']//a}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.58 (81a06fb873a9..., userDataDir: C:\Users\srivi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54419}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54419/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 3000, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 75738b33a3674ef2bc2c03ffce8a5d8f
+Command: [9a283302227a4bb243eeeb1dbc5af397, findElement {using=xpath, value=//div[@id='newCustomerLink']//a}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.58 (81a06fb873a9..., userDataDir: C:\Users\srivi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59358}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59358/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 3000, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9a283302227a4bb243eeeb1dbc5af397
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -70,7 +125,7 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy13.getWrappedElement(Unknown Source)
+at jdk.proxy2/jdk.proxy2.$Proxy15.getWrappedElement(Unknown Source)
 at org.openqa.selenium.remote.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:48)
 at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:212)
 at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
@@ -82,7 +137,7 @@ at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:7
 at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:474)
 at pages.LoginPage.newCustomerClick(LoginPage.java:48)
 at pages.RegistrationPage.registerUser(RegistrationPage.java:48)
-at tests.JuiceShopTestsWithTestNG.testRegisterUser(JuiceShopTestsWithTestNG.java:75)
+at tests.JuiceShopTestsWithTestNG.testRegisterUser(JuiceShopTestsWithTestNG.java:46)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -115,31 +170,148 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRegisterUser -->
-        <test-method signature="testSelectOneDayDelivery()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-09T18:37:13 CDT" name="testSelectOneDayDelivery" finished-at="2024-10-09T18:37:13 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testAddNewAddress" duration-ms="306" status="PASS">
+        <test-method is-config="true" signature="takeFailedResultScreenshot(org.testng.ITestResult)[pri:0, instance:tests.JuiceShopTestsWithTestNG@217ed35e]" started-at="2024-10-09T20:24:31 CDT" name="takeFailedResultScreenshot" finished-at="2024-10-09T20:24:31 CDT" duration-ms="205" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testRegisterUser status=FAILURE method=JuiceShopTestsWithTestNG.testRegisterUser()[pri:0, instance:tests.JuiceShopTestsWithTestNG@217ed35e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeFailedResultScreenshot -->
+        <test-method signature="testSelectOneDayDelivery()[pri:0, instance:tests.JuiceShopTestsWithTestNG@217ed35e]" started-at="2024-10-09T20:24:31 CDT" name="testSelectOneDayDelivery" finished-at="2024-10-09T20:24:31 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testAddNewAddress" duration-ms="423" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSelectOneDayDelivery -->
-        <test-method signature="testMakePayment()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-09T18:37:13 CDT" name="testMakePayment" finished-at="2024-10-09T18:37:16 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testSelectOneDayDelivery" duration-ms="3155" status="PASS">
+        <test-method is-config="true" signature="takeFailedResultScreenshot(org.testng.ITestResult)[pri:0, instance:tests.JuiceShopTestsWithTestNG@217ed35e]" started-at="2024-10-09T20:24:31 CDT" name="takeFailedResultScreenshot" finished-at="2024-10-09T20:24:31 CDT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testSelectOneDayDelivery status=SUCCESS method=JuiceShopTestsWithTestNG.testSelectOneDayDelivery()[pri:0, instance:tests.JuiceShopTestsWithTestNG@217ed35e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeFailedResultScreenshot -->
+        <test-method signature="testMakePayment()[pri:0, instance:tests.JuiceShopTestsWithTestNG@217ed35e]" started-at="2024-10-09T20:24:31 CDT" name="testMakePayment" finished-at="2024-10-09T20:24:34 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testSelectOneDayDelivery" duration-ms="2796" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMakePayment -->
-        <test-method signature="testPlaceOrderAndPay()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-09T18:37:17 CDT" name="testPlaceOrderAndPay" finished-at="2024-10-09T18:37:17 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testMakePayment" duration-ms="415" status="PASS">
+        <test-method is-config="true" signature="takeFailedResultScreenshot(org.testng.ITestResult)[pri:0, instance:tests.JuiceShopTestsWithTestNG@217ed35e]" started-at="2024-10-09T20:24:34 CDT" name="takeFailedResultScreenshot" finished-at="2024-10-09T20:24:34 CDT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testMakePayment status=SUCCESS method=JuiceShopTestsWithTestNG.testMakePayment()[pri:0, instance:tests.JuiceShopTestsWithTestNG@217ed35e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeFailedResultScreenshot -->
+        <test-method signature="testPlaceOrderAndPay()[pri:0, instance:tests.JuiceShopTestsWithTestNG@217ed35e]" started-at="2024-10-09T20:24:34 CDT" name="testPlaceOrderAndPay" finished-at="2024-10-09T20:24:35 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testMakePayment" duration-ms="563" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPlaceOrderAndPay -->
-        <test-method signature="testViewOrderHistory()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-09T18:37:17 CDT" name="testViewOrderHistory" finished-at="2024-10-09T18:37:17 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testPlaceOrderAndPay" duration-ms="473" status="PASS">
+        <test-method is-config="true" signature="takeFailedResultScreenshot(org.testng.ITestResult)[pri:0, instance:tests.JuiceShopTestsWithTestNG@217ed35e]" started-at="2024-10-09T20:24:35 CDT" name="takeFailedResultScreenshot" finished-at="2024-10-09T20:24:35 CDT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testPlaceOrderAndPay status=SUCCESS method=JuiceShopTestsWithTestNG.testPlaceOrderAndPay()[pri:0, instance:tests.JuiceShopTestsWithTestNG@217ed35e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeFailedResultScreenshot -->
+        <test-method signature="testViewOrderHistory()[pri:0, instance:tests.JuiceShopTestsWithTestNG@217ed35e]" started-at="2024-10-09T20:24:35 CDT" name="testViewOrderHistory" finished-at="2024-10-09T20:24:35 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testPlaceOrderAndPay" duration-ms="607" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testViewOrderHistory -->
-        <test-method signature="testPrintOrderConfimation()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-09T18:37:17 CDT" name="testPrintOrderConfimation" finished-at="2024-10-09T18:37:18 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testViewOrderHistory" duration-ms="246" status="PASS">
+        <test-method is-config="true" signature="takeFailedResultScreenshot(org.testng.ITestResult)[pri:0, instance:tests.JuiceShopTestsWithTestNG@217ed35e]" started-at="2024-10-09T20:24:35 CDT" name="takeFailedResultScreenshot" finished-at="2024-10-09T20:24:35 CDT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testViewOrderHistory status=SUCCESS method=JuiceShopTestsWithTestNG.testViewOrderHistory()[pri:0, instance:tests.JuiceShopTestsWithTestNG@217ed35e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeFailedResultScreenshot -->
+        <test-method signature="testPrintOrderConfimation()[pri:0, instance:tests.JuiceShopTestsWithTestNG@217ed35e]" started-at="2024-10-09T20:24:35 CDT" name="testPrintOrderConfimation" finished-at="2024-10-09T20:24:36 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testViewOrderHistory" duration-ms="946" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPrintOrderConfimation -->
-        <test-method signature="testLogout()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-09T18:37:18 CDT" name="testLogout" finished-at="2024-10-09T18:37:19 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testPrintOrderConfimation" duration-ms="1158" status="PASS">
+        <test-method is-config="true" signature="takeFailedResultScreenshot(org.testng.ITestResult)[pri:0, instance:tests.JuiceShopTestsWithTestNG@217ed35e]" started-at="2024-10-09T20:24:36 CDT" name="takeFailedResultScreenshot" finished-at="2024-10-09T20:24:36 CDT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testPrintOrderConfimation status=SUCCESS method=JuiceShopTestsWithTestNG.testPrintOrderConfimation()[pri:0, instance:tests.JuiceShopTestsWithTestNG@217ed35e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeFailedResultScreenshot -->
+        <test-method signature="testLogout()[pri:0, instance:tests.JuiceShopTestsWithTestNG@217ed35e]" started-at="2024-10-09T20:24:36 CDT" name="testLogout" finished-at="2024-10-09T20:24:37 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testPrintOrderConfimation" duration-ms="958" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at org.testng.Assert.assertTrue(Assert.java:67)
+at tests.JuiceShopTestsWithTestNG.testLogout(JuiceShopTestsWithTestNG.java:160)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogout -->
-        <test-method signature="testTrackOrder()[pri:0, instance:tests.JuiceShopTestsWithTestNG@1f2586d6]" started-at="2024-10-09T18:37:19 CDT" name="testTrackOrder" finished-at="2024-10-09T18:37:22 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testViewOrderHistory" duration-ms="3039" status="FAIL">
+        <test-method is-config="true" signature="takeFailedResultScreenshot(org.testng.ITestResult)[pri:0, instance:tests.JuiceShopTestsWithTestNG@217ed35e]" started-at="2024-10-09T20:24:37 CDT" name="takeFailedResultScreenshot" finished-at="2024-10-09T20:24:38 CDT" duration-ms="303" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testLogout status=FAILURE method=JuiceShopTestsWithTestNG.testLogout()[pri:0, instance:tests.JuiceShopTestsWithTestNG@217ed35e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeFailedResultScreenshot -->
+        <test-method signature="testTrackOrder()[pri:0, instance:tests.JuiceShopTestsWithTestNG@217ed35e]" started-at="2024-10-09T20:24:38 CDT" name="testTrackOrder" finished-at="2024-10-09T20:24:41 CDT" depends-on-methods="tests.JuiceShopTestsWithTestNG.testViewOrderHistory" duration-ms="3084" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='heading']//button[@aria-label='Track Your Order']"}
@@ -148,9 +320,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.24.0', revision: '748ffc9bc3'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [75738b33a3674ef2bc2c03ffce8a5d8f, findElement {using=xpath, value=//div[@class='heading']//button[@aria-label='Track Your Order']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.58 (81a06fb873a9..., userDataDir: C:\Users\srivi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54419}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54419/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 3000, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 75738b33a3674ef2bc2c03ffce8a5d8f]]>
+Command: [9a283302227a4bb243eeeb1dbc5af397, findElement {using=xpath, value=//div[@class='heading']//button[@aria-label='Track Your Order']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.58 (81a06fb873a9..., userDataDir: C:\Users\srivi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59358}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59358/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 3000, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9a283302227a4bb243eeeb1dbc5af397]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='heading']//button[@aria-label='Track Your Order']"}
@@ -159,9 +331,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.24.0', revision: '748ffc9bc3'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [75738b33a3674ef2bc2c03ffce8a5d8f, findElement {using=xpath, value=//div[@class='heading']//button[@aria-label='Track Your Order']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.58 (81a06fb873a9..., userDataDir: C:\Users\srivi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54419}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54419/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 3000, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 75738b33a3674ef2bc2c03ffce8a5d8f
+Command: [9a283302227a4bb243eeeb1dbc5af397, findElement {using=xpath, value=//div[@class='heading']//button[@aria-label='Track Your Order']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.58 (81a06fb873a9..., userDataDir: C:\Users\srivi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59358}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59358/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 3000, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9a283302227a4bb243eeeb1dbc5af397
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -178,7 +350,7 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy13.getWrappedElement(Unknown Source)
+at jdk.proxy2/jdk.proxy2.$Proxy15.getWrappedElement(Unknown Source)
 at org.openqa.selenium.remote.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:48)
 at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:212)
 at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
@@ -189,7 +361,7 @@ at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:26
 at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:702)
 at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:474)
 at pages.NavBar.trackOrder(NavBar.java:111)
-at tests.JuiceShopTestsWithTestNG.testTrackOrder(JuiceShopTestsWithTestNG.java:169)
+at tests.JuiceShopTestsWithTestNG.testTrackOrder(JuiceShopTestsWithTestNG.java:140)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -222,6 +394,21 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testTrackOrder -->
+        <test-method is-config="true" signature="takeFailedResultScreenshot(org.testng.ITestResult)[pri:0, instance:tests.JuiceShopTestsWithTestNG@217ed35e]" started-at="2024-10-09T20:24:41 CDT" name="takeFailedResultScreenshot" finished-at="2024-10-09T20:24:41 CDT" duration-ms="264" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testTrackOrder status=FAILURE method=JuiceShopTestsWithTestNG.testTrackOrder()[pri:0, instance:tests.JuiceShopTestsWithTestNG@217ed35e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeFailedResultScreenshot -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.JuiceShopTestsWithTestNG@217ed35e]" started-at="2024-10-09T20:24:41 CDT" name="tearDown" finished-at="2024-10-09T20:24:41 CDT" duration-ms="581" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- tests.JuiceShopTestsWithTestNG -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

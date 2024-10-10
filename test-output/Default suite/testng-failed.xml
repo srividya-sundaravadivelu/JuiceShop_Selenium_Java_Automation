@@ -5,17 +5,21 @@
     <classes>
       <class name="tests.JuiceShopTestsWithTestNG">
         <methods>
-          <include name="testCheckout"/>
-          <include name="testSelectOneDayDelivery"/>
-          <include name="testViewOrderHistory"/>
+          <include name="testPrintOrderConfimation"/>
+          <include name="setUp"/>
+          <include name="testLogout"/>
           <include name="testTrackOrder"/>
-          <include name="testAddNewAddress"/>
-          <include name="initializeTest"/>
           <include name="testLogin"/>
           <include name="testPlaceOrderAndPay"/>
           <include name="testMakePayment"/>
           <include name="testIncreaseAllQty"/>
           <include name="testRegisterUser"/>
+          <include name="testCheckout"/>
+          <include name="takeFailedResultScreenshot"/>
+          <include name="tearDown"/>
+          <include name="testViewOrderHistory"/>
+          <include name="testSelectOneDayDelivery"/>
+          <include name="testAddNewAddress"/>
           <include name="testAddToCart"/>
         </methods>
       </class> <!-- tests.JuiceShopTestsWithTestNG -->
